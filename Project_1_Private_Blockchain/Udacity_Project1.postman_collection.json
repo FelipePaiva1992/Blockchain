@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "bed979e6-3feb-4410-86c9-c1d2d2f6a7e3",
+		"name": "Udacity_Project1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getGenesis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/block/0",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"block",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "requestValidation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"{{WALLET_KEY}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/requestValidation",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"requestValidation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submitStar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"{{WALLET_KEY}}\",\n    \"signature\": \"{{SIGNATURE}}\",\n    \"message\": \"{{RESPONSE_REQUEST_VALIDATION}}\",\n    \"star\": {\n        \"dec\": \"68' 52' 56.9\",\n        \"ra\": \"16h 29m 1.0s\",\n        \"story\": \"Testing the story 4\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/submitstar",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"submitstar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/blocks/{{WALLET_KEY}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blocks",
+						"{{WALLET_KEY}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
