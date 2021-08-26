@@ -35,7 +35,7 @@
         if (typeof web3 !== 'undefined') {
             web3 = new Web3(web3.currentProvider);
         } else {
-            web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+            web3 = new Web3(new Web3.providers.HttpProvider("INFURA URL"));
         }
 
         let RemixContract;
@@ -76,18 +76,21 @@
                         "type": "function"
                     }
                 ],
-                '0xfe6b7daec01C4273149716F6C9D1883134d3Ad1c'
+                '0xF8A3FFEAb9fF3E024b8c2e479ad95babd540Bde5'
             );
 
             showContent();
 
         })
 
+        if (window && window.ethereum) window.ethereum.enable()
+
 
         $("#setMessageButton").click(function () {
             try {
                 message = $("#userInput").val()
-                const sender = "0x146c205E609B80A71c4Ed7a6F52929D49033E7dE";
+                const sender = "WALLET ADDRESS";
+
                 RemixContract.methods.setMessage(message).send({ from: sender })
                     .then(data => {
                         showContent();
