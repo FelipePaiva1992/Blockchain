@@ -22,6 +22,19 @@ web3.eth.getTransactionCount(address)
     console.error(err);
 })
 
+web3.eth.getGasPrice()
+.then((data) => {
+    const gas = web3.utils.fromWei(data, 'ether')
+
+    console.log('getGasPrice: ', gas)
+
+}).catch((error) => {
+    console.error(err);
+})
+
+
+
+
 
 // CONTRACT
 const contractAddress = "0x0D8775F648430679A709E98d2b0Cb6250d2887EF";
