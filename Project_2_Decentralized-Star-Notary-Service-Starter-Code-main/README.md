@@ -7,6 +7,13 @@
 |Node| v15.5.1 |
 |Web3.js| v1.3.5 |
 
+## ERC-721 Token Info
+
+| Package   | Version |
+|:-------:|:-------------|
+|Name| Felipe Star Token |
+|Symbol| FST |
+
 
 ## Results
 
