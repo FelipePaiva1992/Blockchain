@@ -1,0 +1,10 @@
+{
+  "name": "Project_2_Decentralized-Star-Notary-Service-Starter-Code-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "openzeppelin-solidity": "3.2.0",
+    "truffle-hdwallet-provider": "1.0.17"
+  }
+}
