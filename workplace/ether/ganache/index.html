@@ -35,7 +35,7 @@
         if (typeof web3 !== 'undefined') {
             web3 = new Web3(web3.currentProvider);
         } else {
-            web3 = new Web3(new Web3.providers.HttpProvider("INFURA URL"));
+            web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/v3/4dc57cdfd9d948eeaf14c33b7bcbd085"));
         }
 
         let RemixContract;
@@ -89,7 +89,7 @@
         $("#setMessageButton").click(function () {
             try {
                 message = $("#userInput").val()
-                const sender = "WALLET ADDRESS";
+                const sender = "0xf9B8DF9C10a3f1B58BBB43d73d0f244a06dF6356";
 
                 RemixContract.methods.setMessage(message).send({ from: sender })
                     .then(data => {

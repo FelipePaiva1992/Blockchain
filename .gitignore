@@ -116,3 +116,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# truffle v2
+contracts/.placeholder
+test/.placeholder
+build
+node_modules
