@@ -1,0 +1,12 @@
+@startuml
+
+Farmer -> Farmer: Harvest grain
+Farmer -> Farmer: Pack grain
+Farmer -> Farmer: Process grain into brioche
+Farmer -> Farmer: Mark the brioche for sale
+Farmer <- Distributor: Buy the brioche
+Farmer <- Distributor: Ship the brioche
+Distributor <- Retailer: Receive the brioche
+Retailer <- Consumer: Purchase the brioche
+
+@enduml
