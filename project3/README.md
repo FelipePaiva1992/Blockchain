@@ -1,7 +1,4 @@
 # Ethereum SupplyChain Dapp
-
-[Udacity - Blockchain Developer Nanodegree Program](https://www.udacity.com/course/blockchain-developer-nanodegree--nd1309)
-
 #### Activity Diagram
 ![Activity Diagram](res/brioche-activity-diagram.png)
 
