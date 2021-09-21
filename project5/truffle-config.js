@@ -4,10 +4,10 @@ const metamask = "OBFUSCATE";
 module.exports = {
   networks: {
     development: {
-      provider: function () {
-        return new HDWallet(metamask, `HTTP://127.0.0.1:7545`)
-      },
-      network_id: "*",
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      websockets: true
     },
     rinkeby: {
       provider: function () {
@@ -20,7 +20,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-      version: "0.8.0",
+      version: "0.8.5",
     }
   }
 }
